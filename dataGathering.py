@@ -1,5 +1,5 @@
-import cv2
-import os
+import cv2,os
+import numpy as np
 
 cam = cv2.VideoCapture(0)
 cam.set(3, 640) # set video width
@@ -25,7 +25,8 @@ while(True):
         count += 1
 
         # Save the captured image into the datasets folder
-        cv2.imwrite("dataset/User." + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h,x:x+w])
+        image = cv2.equalizeHist(gray[y:y+h,x:x+w])
+        cv2.imwrite("dataset/User." + str(face_id) + '.' + str(count) + ".jpg",image)
 
         cv2.imshow('image', img)
 

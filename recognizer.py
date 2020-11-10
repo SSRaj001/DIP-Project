@@ -1,6 +1,5 @@
 import cv2,os
 
-
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read('trainer/trainer.yml')
 cascadePath = "Cascades/haarcascade_frontalface_default.xml"
@@ -11,7 +10,7 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 #iniciate id counter
 id = 0
 
-names = ['None', 'SSR','SSG','IGP'] 
+names = ['None', 'SSR','IGP'] 
 
 # Initialize and start realtime video capture
 cam = cv2.VideoCapture(0)

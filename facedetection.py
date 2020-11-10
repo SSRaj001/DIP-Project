@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 
 faceCascade = cv2.CascadeClassifier('Cascades/haarcascade_frontalface_default.xml')
 eyeCascade = cv2.CascadeClassifier('Cascades/haarcascade_eye.xml')
